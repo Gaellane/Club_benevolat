@@ -534,6 +534,65 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0a0a0a}
   transition:all .3s ease;
 }
 .dot.active{background:var(--dark);width:24px;border-radius:4px;}
+
+/* ════════════════ RESPONSIVE ════════════════ */
+@media (max-width: 950px) {
+  #s1 .inner, #s3 .inner, #s5 .inner, #s6 .inner, #s7 .inner, #s9 .inner { flex-direction: column; overflow-y: auto; overflow-x: hidden; }
+  
+  #s1 .txt { padding: 80px 30px 40px; flex: none; justify-content: flex-start; }
+  #s1 .cside { flex: none; height: 350px; }
+  
+  #s3 .sidebar, #s5 .sidebar, #s6 .sidebar, #s7 .sidebar {
+    width: 100% !important; min-width: 100% !important; 
+    height: auto !important; min-height: 150px; padding: 30px 20px !important; flex: none;
+  }
+  
+  #s3 .main, #s5 .main, #s6 .main, #s7 .main {
+    padding: 20px 20px 80px !important; flex: 1; align-content: flex-start; justify-content: flex-start;
+  }
+  
+  .sbar { padding: 60px 20px 20px !important; }
+  
+  #s2 .inner, #s4 .inner { overflow-y: auto; overflow-x: hidden; }
+  #s2 .grid { grid-template-columns: 1fr; display: flex; flex-direction: column; gap: 15px; padding: 10px 20px 80px !important; height: auto; flex: none; }
+  #s4 .grid { grid-template-columns: 1fr 1fr; padding: 10px 20px 80px !important; height: auto; flex: none; }
+  
+  #s7 .org-row { grid-template-columns: 1fr 1fr; }
+  
+  #s9 .qr-side { padding: 60px 20px 20px; flex: none; }
+  #s9 .contact-side { padding: 20px 20px 80px; flex: none; }
+  #s9 .qr-container { width: 160px; height: 160px; padding: 15px; }
+  #s9 .qr-container img { max-width: 100%; height: auto; }
+  
+  .slide-title { font-size: clamp(24px, 6vw, 34px) !important; }
+  #s1 .ht { font-size: clamp(40px, 10vw, 70px) !important; }
+  #s1 .hs { font-size: clamp(24px, 5vw, 36px) !important; }
+  .slab { font-size: clamp(24px, 5vw, 32px) !important; text-align: center; }
+  .ssub { text-align: center; }
+
+  .nbtn { width: 44px; height: 44px; font-size: 22px; }
+  #pb { left: 8px; } #nb { right: 8px; }
+  #spanel { width: 220px; padding: 15px; top: 60px; right: 8px; transform: translateX(250px); }
+  
+  .snum { top: 10px; right: 10px; transform: scale(0.8); }
+  #sbtn { top: 12px; right: 60px; width: 36px; height: 36px; font-size: 16px; }
+  
+  .opill { min-width: 100%; flex: 1 1 100%; }
+}
+
+@media (max-width: 650px) {
+  #s4 .grid { grid-template-columns: 1fr; }
+  #s7 .org-row { grid-template-columns: 1fr; }
+  .org-row { gap: 15px; }
+  .org-node { min-width: 105px; width: 105px; }
+  .tcard { width: 140px; flex: 0 0 140px; }
+  .tcard-photo { height: 160px; }
+  #s8 .mt { font-size: clamp(40px, 12vw, 80px) !important; }
+  #s8 .cta { padding: 12px 24px; font-size: 14px; }
+  #s8 .inner { padding: 20px; }
+  
+  .pcard::after { display: none; }
+}
 </style>
 </head>
 <body>
